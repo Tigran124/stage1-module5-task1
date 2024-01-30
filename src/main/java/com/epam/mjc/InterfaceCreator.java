@@ -25,11 +25,9 @@ public class InterfaceCreator {
     }
 
     public Consumer<List<Integer>> addEvenValuesAtTheEnd() {
-        return x -> {
-            x.addAll(x.stream().
-                    filter(z -> z % 2 == 0).
-                    collect(Collectors.toList()));
-        };
+        return x -> x.addAll(x.stream().
+                filter(z -> z % 2 == 0).
+                collect(Collectors.toList()));
     }
 
     public Supplier<List<String>> filterCollection(List<String> values) {
